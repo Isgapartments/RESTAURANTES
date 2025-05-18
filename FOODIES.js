@@ -364,8 +364,5 @@ function changeLanguage(language) {
             // articleElement.querySelector(".address").textContent = article.address;
         }
     });
-    // Si hay más artículos en el HTML que en las traducciones, puedes ocultarlos:
-    for (let i = translations[language].articles.length; i < articles.length; i++) {
-        articles[i].style.display = "none";
-    }
+    
 }
