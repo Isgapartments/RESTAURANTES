@@ -8,7 +8,7 @@ function changeLanguage(language) {
             articles: [
                 {
                     title: "ANTIGüEDADES BAR DE TAPAS",
-                    description: "El sitio al que vuelves por sus croquetas, te quedas por el trato y repites por lo bien que se come sin arruinarse.",
+                    description: "Un clásico sevillano donde cada tapa cuenta una historia y el ambiente te hace sentir como en casa.",
                     link: "Ver en Google Maps"
                 },
                 {
@@ -48,7 +48,7 @@ function changeLanguage(language) {
                 },
                 {
                     title: "TABERNA ÁLVARO PEREGIL LA GOLETA",
-                    description: "Un bar de barrio con personalidad propia. Sus platos tienen ese toque casero que enamora, y los precios hacen que siempre quieras repetir.",
+                    description: "Tradición y sabor en cada plato, en un rincón que invita a volver una y otra vez.",
                     link: "Ver en Google Maps"
                 },
                 {
@@ -65,7 +65,7 @@ function changeLanguage(language) {
             articles: [
                 {
                     title: "ANTIGüEDADES TAPAS BAR",
-                    description: "The place you return to for its croquettes, stay for the service, and come back for how well you eat without breaking the bank.",
+                    description: "A Sevillian classic where every tapa tells a story and the atmosphere makes you feel at home.",
                     link: "View on Google Maps"
                 },
                 {
@@ -105,7 +105,7 @@ function changeLanguage(language) {
                 },
                 {
                     title: "TABERNA ÁLVARO PEREGIL LA GOLETA",
-                    description: "A neighborhood bar with its own personality. Its dishes have that homemade touch that makes you fall in love, and the prices make you want to come back.",
+                    description: "Tradition and flavor in every dish, in a corner that invites you to return again and again.",
                     link: "View on Google Maps"
                 },
                 {
@@ -122,7 +122,7 @@ function changeLanguage(language) {
             articles: [
                 {
                     title: "ANTIGüEDADES TAPAS BAR",
-                    description: "Der Ort, an den Sie wegen der Kroketten zurückkehren, wegen des Services bleiben und wegen des guten Essens wiederkommen.",
+                    description: "Ein sevillianischer Klassiker, bei dem jede Tapa eine Geschichte erzählt und die Atmosphäre ein Gefühl von Zuhause vermittelt.",
                     link: "Auf Google Maps ansehen"
                 },
                 {
@@ -162,7 +162,7 @@ function changeLanguage(language) {
                 },
                 {
                     title: "TABERNA ÁLVARO PEREGIL LA GOLETA",
-                    description: "Eine Nachbarschaftsbar mit eigenem Charakter. Ihre Gerichte haben diesen hausgemachten Touch, der einen verlieben lässt, und die Preise machen Lust auf mehr.",
+                    description: "Tradition und Geschmack in jedem Gericht, in einer Ecke, die immer wieder zum Wiederkommen einlädt.",
                     link: "Auf Google Maps ansehen"
                 },
                 {
@@ -179,7 +179,7 @@ function changeLanguage(language) {
             articles: [
                 {
                     title: "古董餐吧",
-                    description: "您会因其可口的炸丸子而回到这里，因服务而留下，并因美味的食物而再次光顾。",
+                    description: "塞维利亚的经典，每一道小吃都讲述着故事，氛围让你有宾至如归的感觉。",
                     link: "在谷歌地图上查看"
                 },
                 {
@@ -219,7 +219,7 @@ function changeLanguage(language) {
                 },
                 {
                     title: "TABERNA ÁLVARO PEREGIL LA GOLETA",
-                    description: "一家具有独特个性的社区酒吧。它的菜肴带有那种让人爱上的家常风味，价格也让人想要一再光顾。",
+                    description: "每道菜都充满传统与风味，这个角落让人一次又一次想要回来。",
                     link: "在谷歌地图上查看"
                 },
                 {
@@ -236,7 +236,7 @@ function changeLanguage(language) {
             articles: [
                 {
                     title: "АНТИКВАРНЫЙ ТАПАС-БАР",
-                    description: "Место, куда вы возвращаетесь за крокетами, остаетесь ради обслуживания и возвращаетесь снова ради вкусной еды.",
+                    description: "Севильская классика, где каждая закуска рассказывает свою историю, а атмосфера заставляет чувствовать себя как дома.",
                     link: "Посмотреть на Google Maps"
                 },
                 {
@@ -276,7 +276,7 @@ function changeLanguage(language) {
                 },
                 {
                     title: "ТАВЕРНА ÁЛЬВАРО ПЕРЕГИЛ ЛА ГОЛЕТА",
-                    description: "Районный бар с уникальной атмосферой. Его блюда имеют домашний вкус, который заставляет влюбляться, а цены заставляют возвращаться снова.",
+                    description: "Традиции и вкус в каждом блюде, в уголке, куда хочется возвращаться снова и снова.",
                     link: "Посмотреть на Google Maps"
                 },
                 {
@@ -333,7 +333,7 @@ function changeLanguage(language) {
                 },
                 {
                     title: "TABERNA ÁLVARO PEREGIL LA GOLETA",
-                    description: "Un bar de quartier avec une personnalité propre. Ses plats ont cette touche maison qui séduit, et les prix vous donnent envie de revenir.",
+                    description: "Tradition et saveur dans chaque plat, dans un coin qui donne envie de revenir encore et encore.",
                     link: "Voir sur Google Maps"
                 },
                 {
@@ -355,9 +355,17 @@ function changeLanguage(language) {
     translations[language].articles.forEach((article, index) => {
         const articleElement = articles[index];
         if (articleElement) {
+            // Actualiza título, descripción y enlace
             articleElement.querySelector("h3").textContent = article.title;
             articleElement.querySelector("p").textContent = article.description;
             articleElement.querySelector("a").textContent = article.link;
+            // Si hay nuevos campos en el HTML, actualízalos aquí, por ejemplo:
+            // articleElement.querySelector("img").src = article.image;
+            // articleElement.querySelector(".address").textContent = article.address;
         }
     });
+    // Si hay más artículos en el HTML que en las traducciones, puedes ocultarlos:
+    for (let i = translations[language].articles.length; i < articles.length; i++) {
+        articles[i].style.display = "none";
+    }
 }
