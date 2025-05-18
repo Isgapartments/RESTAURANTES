@@ -141,3 +141,81 @@ footer {
     font-size: 0.9em;
     border-top: 3px solid #fffaf0; /* Línea superior */
 }
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    main {
+        padding: 20px;
+    }
+    section {
+        gap: 20px;
+    }
+    article {
+        width: calc(48% - 20px);
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    header h2 {
+        font-size: 1.2em;
+    }
+    main {
+        padding: 10px;
+    }
+    section {
+        flex-direction: column;
+        gap: 15px;
+    }
+    article {
+        width: 100%;
+        padding: 12px;
+    }
+    .language-selector label,
+    .language-selector select {
+        font-size: 1em;
+    }
+    .language-selector img {
+        width: 40px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 18px 0;
+    }
+    header h1 {
+        font-size: 1.3em;
+    }
+    header h2 {
+        font-size: 1em;
+    }
+    header::after {
+        height: 3px;
+        width: 80%;
+    }
+    main {
+        padding: 5px;
+    }
+    article {
+        padding: 8px;
+        font-size: 0.95em;
+    }
+    .language-selector label,
+    .language-selector select {
+        font-size: 0.95em;
+    }
+    .language-selector img {
+        width: 32px;
+        height: 22px;
+    }
+    footer {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+}
