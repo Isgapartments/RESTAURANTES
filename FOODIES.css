@@ -1,0 +1,143 @@
+/* General Styles */
+body {
+    font-family: 'Georgia', serif; /* Fuente clásica */
+    background-color: #f5f5dc; /* Beige claro */
+    color: #5c4033; /* Marrón claro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 30px 0; /* Espaciado interno más amplio */
+    background-color: #d2b48c; /* Marrón claro */
+    color: #fffaf0; /* Blanco antiguo */
+}
+
+header h1 {
+    font-size: 2.5em; /* Tamaño del título más grande */
+    font-weight: bold;
+    margin: 0;
+}
+
+header h2 {
+    font-size: 1.5em; /* Tamaño del subtítulo más grande */
+    font-style: italic;
+    margin: 10px 0 0;
+}
+
+/* Line under the header */
+header::after {
+    content: '';
+    display: block;
+    width: 60%; /* Línea más larga */
+    max-width: 900px;
+    height: 5px; /* Línea más delgada */
+    background-color: #fffaf0; /* Blanco antiguo */
+    margin: 15px auto 0;
+}
+
+/* Main Section Styles */
+main {
+    padding: 40px;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px; /* Más espacio entre artículos */
+}
+
+article {
+    background-color: #fffaf0; /* Blanco antiguo */
+    border: 1px solid #d2b48c; /* Marrón claro */
+    border-radius: 8px; /* Bordes más redondeados */
+    padding: 20px;
+    width: calc(32% - 30px); /* Ajuste del tamaño de los artículos */
+    text-align: left; /* Alineación de texto a la izquierda */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    box-sizing: border-box;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+article:hover {
+    transform: translateY(-5px); /* Efecto de elevación */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+article h3 {
+    font-size: 1.5em; /* Títulos más grandes */
+    font-weight: bold;
+    color: #5c4033; /* Marrón claro */
+    margin-bottom: 15px;
+}
+
+article img {
+    border-radius: 8px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: auto;
+}
+
+article .description p {
+    font-size: 1.1em; /* Texto más grande */
+    line-height: 1.6; /* Mejor legibilidad */
+    margin: 0;
+}
+
+article .description a {
+    color: #8b4513; /* Marrón tostado */
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+article .description a:hover {
+    text-decoration: underline;
+}
+
+/* Language Selector Styles */
+.language-selector {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.language-selector label {
+    font-size: 1.1em;
+    color: #5c4033; /* Marrón claro */
+    margin-right: 10px;
+}
+
+.language-selector select {
+    font-size: 1em;
+    padding: 8px;
+    border: 1px solid #d2b48c; /* Marrón claro */
+    border-radius: 5px;
+    background-color: #fffaf0; /* Blanco antiguo */
+    color: #5c4033; /* Marrón claro */
+}
+
+.language-selector img {
+    width: 50px;
+    height: 35px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+language-selector img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #d2b48c; /* Marrón claro */
+    color: #fffaf0; /* Blanco antiguo */
+    font-size: 0.9em;
+    border-top: 3px solid #fffaf0; /* Línea superior */
+}
